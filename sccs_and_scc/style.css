@@ -1,3 +1,16 @@
+* {
+  margin: 0;
+  padding: 0; }
 
+.header {
+  width: 100%;
+  overflow: hidden;
+  background-image: url("images/background_header.jpg");
+  background-position: top center;
+  background-size: cover; }
+
+.header_wrapper-logo {
+  max-width: 960px;
+  display: flex; }
 
 /*# sourceMappingURL=style.css.map */
