@@ -1,20 +1,113 @@
 @import "variables";
-*{
-  margin: 0;
-  padding: 0;
-}
+@import "fonts";
+@import "reset";
 
-.header{
-  width: 100%;
+.header {
   overflow: hidden;
   background-image: url("images/background_header.jpg");
   background-position: top center;
   background-size: cover;
 }
 
+.header_wrapper-all {
+  max-width: 968px;
+  margin: 0 auto;
+}
 
-.header_wrapper-logo{
-  max-width: 960px;
+//lojo and social network
+.header_wrapper-logo {
+  color: $white;
   display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  border-bottom: 2px solid $white;
+}
+
+.header_logo {
+  font-size: 70px;
+  font-family: $Raleway;
+}
+
+.header_socialnetwork {
+  display: block;
+
+  .header_socialnetwork-twiter {
+    width: 25px;
+    height: 23px;
+    display: inline-block;
+    background-image: url("images/sprite.png");
+    overflow: hidden;
+  }
+  .header_socialnetwork-facebook {
+    width: 25px;
+    height: 23px;
+    display: inline-block;
+    background-image: url("images/sprite.png");
+    background-position: -30px 0;
+    overflow: hidden;
+  }
+  .header_socialnetwork-wifi {
+    width: 25px;
+    height: 23px;
+    display: inline-block;
+    background-image: url("images/sprite.png");
+    background-position: -88px 0;
+    overflow: hidden;
+  }
+}
+
+.header_menu-mobile {
+  margin: 10px;
+  background-image: url("images/burger_button.png");
+  width: 35px;
+  height: 35px;
+  //border: 2px solid white;
+}
+
+.header_menu-mobile:hover .header_menu{
+    display: block;
+    position: absolute;
+}
+
+.header_menu {
+  display: none;
+}
+
+.header_intro-text{
+  margin: 100px 0;
+  text-align: center;
+  color: $white;
+  font-size: 35px;
+  .header_intro-text2{
+    font-size: 16px;
+  }
+  .header_intro-greentext{
+    color: $green;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header_menu-mobile{
+    display: none;
+  }
+  .header_menu {
+    margin: 20px 5px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: $font_md;
+
+    a {
+      color: $white;
+      font-family: $Raleway;
+      text-decoration: none;
+      text-transform: uppercase;
+
+    }
+
+    a:hover {
+      color: $green;
+    }
+  }
 
 }
